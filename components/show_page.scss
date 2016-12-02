@@ -1,0 +1,34 @@
+:local {
+  .showPage {
+    padding: 10px;
+  }  
+  .image img {
+    max-width: 100%;
+  }  
+  .button {
+    text-align: center;
+  }
+  .button a {
+    border: 1px solid lightgray;
+    padding: 10px;
+    background-color: gray;
+    text-transform: uppercase;  
+    border-radius: 5px;
+    color: white;
+    font-weight: 200;
+    text-decoration: none;
+  }
+  .title {
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .description {
+    padding: 10px;
+  }
+  .error {
+    color: #a31e15;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+}

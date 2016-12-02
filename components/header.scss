@@ -1,0 +1,24 @@
+:local {
+  .header {
+    border-bottom: solid 1px #666;
+    padding:20px;
+    font-weight: bold;
+    background-color: gray;
+    color: white;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .header a {
+    color: white;
+    text-decoration: none;
+  }
+  .brand {
+    float: left;
+    width: 50%;
+  }
+  .actions {
+    float: left;
+    width: 50%;
+    text-align: right;
+  }
+}
