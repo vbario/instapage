@@ -46,8 +46,15 @@ var ShowPage = React.createClass({
   },
 
   componentDidMount: function() {    
-    console.log("ID: ", this.props.id);
-    $.get('/api/pages/'+ this.props.id, (data) => this.setState({page: data}));
+    //console.log("ID params: ", this.props.params.id);
+    //console.log("ID props: ", this.props.id);
+    var id = '';
+    if (typeof this.props.params !== 'undefined') {
+      id = this.props.params.id;
+    } else {
+      id = this.props.id;
+    };
+    $.get('/api/pages/'+ id, (data) => this.setState({page: data}));
     
   }
 });

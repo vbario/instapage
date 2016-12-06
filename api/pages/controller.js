@@ -2,7 +2,7 @@ var Page = require('./model.js');
 
 exports.index = function(req, res) {
   // Page.find().populate('user').exec()
-  Page.find().populate('user').exec()
+  Page.find({ user: req.user._id}).populate('user').exec()
   .then((pages) => res.send(pages));
 }
 

@@ -9,12 +9,15 @@ import PageList from './components/page_list';
 import EditPage from './components/edit_page';
 import ShowPage from './components/show_page';
 
+var page = {};
+// routes that were used before
+/*<Route path='page' component={ EditPage } />
+<Route path=':id' component={ ShowPage } /> */
 ReactDOM.render(<Router history={browserHistory}>
-  <Route path='/' component={ App }>
-    <IndexRoute component={ PageList } />
-    <Route path='page' component={ EditPage } />    
-    <Route path='edit/:id' component={ EditPage } />
-    /*<Route path=':id' component={ ShowPage } />*/
+  <Route path='/' component={ App } page={ page }>
+    <IndexRoute component={ EditPage } />
+    <Route path='mypages' component={ PageList } />    
+    <Route path='edit/:id' component={ EditPage } />    
   </Route>
   <Route path='/:id' component={ App } />
 </Router>, document.getElementById("placeholder"));

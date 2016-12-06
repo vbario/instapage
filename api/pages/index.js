@@ -4,7 +4,7 @@ var controller = require('./controller');
 var requireLogin = require('../../require_login');
 
 router.get('/', controller.index);
-router.post('/', requireLogin, controller.create);
+router.post('/', controller.create);
 router.put('/:id', requireLogin, controller.update);
 router.get('/delete/:id', requireLogin, controller.delete);
 router.delete('/:id', requireLogin, controller.delete);

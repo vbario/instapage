@@ -19,7 +19,12 @@ var PageList = React.createClass({
         )}
       </div>
     </div>
+  },
+
+  componentDidMount: function() {
+    this.props.onRefresh();
   }
+  
 });
 
 module.exports = PageList;
